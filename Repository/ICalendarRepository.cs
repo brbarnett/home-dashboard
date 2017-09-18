@@ -1,8 +1,11 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using Repository.Models;
 
 namespace Repository
 {
-    public class ICalendarRepository
+    public interface ICalendarRepository
     {
+        Task<IEnumerable<CalendarItem>> GetCalendarItems();
     }
 }
