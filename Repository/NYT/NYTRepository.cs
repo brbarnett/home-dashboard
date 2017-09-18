@@ -10,14 +10,14 @@ namespace Repository.NYT
 {
     public class NYTRepository : INewsRepository
     {
-        private string serviceUrl => $"https://api.nytimes.com/svc/topstories/v2/home.json?api-key={this.apiKey}";
-        private readonly string apiKey;
+        private readonly string _apiKey;
+        private string serviceUrl => $"https://api.nytimes.com/svc/topstories/v2/home.json?api-key={this._apiKey}";
 
         public NYTRepository(string apiKey)
         {
             if (string.IsNullOrEmpty(apiKey)) throw new ArgumentNullException(nameof(apiKey));
 
-            this.apiKey = apiKey;
+            this._apiKey = apiKey;
         }
 
         public async Task<IEnumerable<NewsItem>> GetNewsItems()
