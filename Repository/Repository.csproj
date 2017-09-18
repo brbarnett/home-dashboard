@@ -8,6 +8,7 @@
     <Folder Include="NYT\" />
     <Folder Include="Models\" />
     <Folder Include="Wunderground\" />
+    <Folder Include="Metra\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Models\NYTResponse.cs" />
